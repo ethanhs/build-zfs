@@ -1,0 +1,16 @@
+name: Build zfs
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout zfs
+      uses: actions/checkout@v2
+      with:
+        repository: zfsonlinux/zfs
+    - run: git checkout zfs-0.8.2
+    - run: ./build-zfs.sh
