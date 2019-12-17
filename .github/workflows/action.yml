@@ -19,4 +19,4 @@ jobs:
           repository: zfsonlinux/zfs
           ref: zfs-0.8.2
           path: zfs
-      - run: ./build-zfs.sh
+      - run: ./build-zfs/build-zfs.sh
