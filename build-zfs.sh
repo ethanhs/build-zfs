@@ -1,5 +1,5 @@
 #!/bin/bash -eux
-cd zfs
+cd $GITHUB_WORKSPACE/zfs
 ./autogen.sh
 ./configure --with-config=srpm
 
