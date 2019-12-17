@@ -13,7 +13,6 @@ jobs:
       with:
         repository: zfsonlinux/zfs
         ref: zfs-0.8.2
-        path: zfs
     - name: Checkout build-zfs
       uses: actions/checkout@v2
       with:
