@@ -11,10 +11,12 @@ jobs:
       - name: Checkout build-zfs
         uses: actions/checkout@v2
         with:
-          repository: ethanhs/build-zfs 
+          repository: ethanhs/build-zfs
+          path: build-zfs 
       - name: Checkout zfs
         uses: actions/checkout@v2
         with:
           repository: zfsonlinux/zfs
           ref: zfs-0.8.2
+          path: zfs
       - run: ./build-zfs.sh
