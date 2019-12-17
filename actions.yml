@@ -1,9 +1,0 @@
-name: 'Build zfs 0.8.2 Ubuntu 18.04.3 packages, and publish them'
-author: 'Ethan Smith'
-steps:
-  - name: Checkout zfs
-    uses: actions/checkout@v2
-    with:
-      repository: zfsonlinux/zfs
-  - run: git checkout zfs-0.8.2
-  - run: ./build-zfs.sh
