@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout zfs
-      uses: actions/checkout@v2
-      with:
-        repository: zfsonlinux/zfs
-        ref: zfs-0.8.2
-    - name: Checkout build-zfs
-      uses: actions/checkout@v2
-      with:
-        repository: ethanhs/build-zfs 
-    - run: ./build-zfs.sh
+      - name: Checkout build-zfs
+        uses: actions/checkout@v2
+        with:
+          repository: ethanhs/build-zfs 
+      - name: Checkout zfs
+        uses: actions/checkout@v2
+        with:
+          repository: zfsonlinux/zfs
+          ref: zfs-0.8.2
+      - run: ./build-zfs.sh
