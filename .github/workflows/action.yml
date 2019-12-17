@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
       - name: install dependencies
@@ -22,3 +22,8 @@ jobs:
           ref: zfs-0.8.2
           path: zfs
       - run: ./build-zfs/build-zfs.sh
+      - run: tar cvf zfs-debs.tar $GITHUB_WORKSPACE/zfs/*.deb
+      - uses: actions/upload-artifact@v1
+        with:
+          name: ZFS Debian packages
+          path: zfs-debs.tar
