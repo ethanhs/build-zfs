@@ -13,5 +13,7 @@ jobs:
       with:
         repository: zfsonlinux/zfs
         ref: zfs-0.8.2
-        path: zfs 
+        path: zfs
+    - name: Checkout build-zfs
+      uses: actions/checkout@2
     - run: ./build-zfs.sh
