@@ -15,5 +15,7 @@ jobs:
         ref: zfs-0.8.2
         path: zfs
     - name: Checkout build-zfs
-      uses: actions/checkout@2
+      uses: actions/checkout@v2
+      with:
+        repository: ethanhs/build-zfs 
     - run: ./build-zfs.sh
